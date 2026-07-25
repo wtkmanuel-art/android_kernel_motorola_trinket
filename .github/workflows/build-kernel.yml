@@ -1,4 +1,5 @@
-name: Compile KernelSU Next for Sofia
+- name: Checkout Kernel Source
+        uses: actions/checkout@v4name: Compile KernelSU Next for Sofia
 
 on:
   workflow_dispatch:
@@ -9,9 +10,6 @@ jobs:
     steps:
       - name: Checkout Kernel Source
         uses: actions/checkout@v4
-        with:
-          repository: wtkmanuel-art/android_kernel_motorola_trinket
-          ref: android-10-release-qpe
 
       - name: Setup Environment & Toolchain
         run: |
