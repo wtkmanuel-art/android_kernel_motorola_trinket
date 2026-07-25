@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Checkout Kernel Source
         uses: actions/checkout@v4
+        with:
+          ref: android-10-release-qpe
 
       - name: Setup Environment & Toolchain
         run: |
